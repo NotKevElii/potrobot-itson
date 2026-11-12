@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ITSON – Asistente virtual</title>
+<link rel="icon" type="image/png" href="assets/PI2_icon.png">
+<link rel="apple-touch-icon" href="assets/PI2_icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="logo" href="#" data-href="home"><img src="assets/Itsonlogo.png" alt="ITSON"></a>
+    <nav class="bar" id="nav">
+      <a href="#" data-href="isw">ISW ↓</a>
+      <a href="#" data-href="mapa">Mapa ↓</a>
+      <a href="#" class="on" data-href="asistente" data-i18n="nav3">Asistente virtual ↓</a>
+      <a href="#" data-href="informes" data-i18n="nav4">Mayores informes</a>
+    </nav>
+    <div class="tools">
+      <button class="pill" id="lang" aria-label="Idioma / Language"><span class="globe">🌐</span> <span id="langLbl">ES</span> ↓</button>
+      <button class="pill sun" id="theme" aria-label="Tema / Theme"><span class="ico">☀</span></button>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h1 data-i18n="h1">Asistente virtual</h1>
+    <p class="lead" data-i18n="lead">¿Necesitas ayuda? PotroBot está aquí para resolver tus dudas y brindarte la información que necesitas.</p>
+    <p data-i18n="desc">Seleccione el tema de su interés. En la parte inferior encontrará preguntas frecuentes que podrán orientarle y ayudarle a resolver sus dudas. Si no encuentra la respuesta que busca, puede dirigirse al apartado <b>Mayores informes</b> para obtener información adicional.</p>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <section class="chat" id="chat" aria-live="polite"></section>
+
+  <section class="faq">
+    <h2 data-i18n="faq">Preguntas frecuentes</h2>
+    <div class="dots" id="dots"></div>
+    <div class="count" id="count"></div>
+    <div class="scanner-stage">
+      <canvas id="scannerCanvas" aria-hidden="true"></canvas>
+      <div class="track" id="track"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <img class="pi" src="assets/PI.png" alt="PI">
+          <p class="foot-title" data-i18n="ftitle">Ingeniería en Software – ITSON</p>
+        </div>
+        <div class="foot-cols">
+          <div class="fcol"><h5 data-i18n="f1">Mayores informes</h5><p>ITSON Campus Náinari</p></div>
+          <div class="fcol"><h5 data-i18n="f2">Responsable de programa</h5><p>Mtra. Martha Eloisa Larrínaga H.</p></div>
+          <div class="fcol"><h5 data-i18n="f3">Correo</h5><p>isw-obregon@itson.edu.mx</p></div>
+          <div class="fcol"><h5 data-i18n="f4">Teléfono</h5><p>+52 (644) 410-90-01 ext. 1531</p></div>
+          <div class="fcol"><h5 data-i18n="f5">Ubicación</h5><p>Instituto Tecnológico de Sonora, Ciudad Obregón, Sonora, México.</p></div>
+          <div class="fcol fsocial"><h5 data-i18n="f6">Redes sociales</h5>
+            <ul>
+              <li><a href="https://www.facebook.com/itson.mx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/itsonoficial" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://x.com/itson" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+              <li><a href="https://www.youtube.com/channel/UCWb8dt1oQiqTX4MZEcEG-0g" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div class="wordmark">ITSON</div>
+        <p class="credits" data-i18n="fcred">© 2026 Instituto Tecnológico de Sonora · Ingeniería en Software</p>
+      </div>
+    </div>
+    <div class="strip" id="cartel"><div class="run" id="run"></div></div>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
